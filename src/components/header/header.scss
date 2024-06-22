@@ -1,0 +1,93 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+
+  &_title {
+    color: white;
+  }
+
+  .header_navbar {
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+
+      .navbar_element_1,
+      .navbar_element_2 {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .auth_box {
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: black;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(255, 255, 255);
+          color: black;
+        }
+      }
+
+      .navbar_element_3,
+      .navbar_element_4 {
+        text-decoration: none;
+        color: white;
+      }
+
+      .header_button {
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: black;
+        text-align: center;
+        color: white;
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(255, 255, 255);
+          color: black;
+        }
+      }
+
+      .dropdown_content {
+        position: absolute;
+        right: 0;
+        background-color: white;
+        z-index: 1;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        min-width: 120px;
+      }
+
+      .logout_button {
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        color: black;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+    }
+  }
+}

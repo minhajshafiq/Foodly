@@ -1,0 +1,245 @@
+.menu {
+  &_logo {
+    max-width: 100%;
+    max-height: 20rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &_header {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      width: 9rem;
+      height: 0.25rem;
+      background-color: #99e2d0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 92%;
+    }
+  }
+
+  &_container {
+    margin-top: -4rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+
+    .submenus {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1rem;
+    }
+
+    .submenu {
+      max-width: 100%;
+      overflow: hidden;
+      padding: 0 1rem;
+    }
+    .submenu__title {
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 0.5rem;
+      font-weight: normal;
+    }
+    .submenu__title::after {
+      content: "";
+      width: 3rem;
+      height: 0.25rem;
+      background-color: #99e2d0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    .submenuItem {
+      background-color: white;
+      padding: 1rem;
+      display: flex;
+      border-radius: 0.75rem;
+      margin: 1rem 0;
+      box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .submenuItem__container {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      flex: 1;
+    }
+    .submenuItem__title {
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .submenuItem__description {
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .submenuItem__price {
+      font-weight: bold;
+      display: flex;
+      align-items: flex-end;
+      padding-left: 0.5rem;
+    }
+    .submenuItem__confirmation {
+      background-color: #99e2d0;
+      margin: -1rem -5rem -1rem 1rem;
+      width: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition-duration: 0.5s;
+    }
+    .submenuItem:hover .submenuItem__confirmation {
+      margin-right: -1rem;
+    }
+    .submenuItem__Slideicon {
+      height: 2rem;
+      width: 2rem;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      transform: rotate(180deg);
+      transition-duration: 0.5s;
+    }
+    .submenuItem:hover .submenuItem__Slideicon {
+      transform: rotate(0);
+    }
+    .submenuItem__icon {
+      color: #99e2d0;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .appears {
+      animation: slideDown 1s both;
+    }
+
+    #case-1 {
+      animation-delay: 0.1s;
+    }
+
+    #case-2 {
+      animation-delay: 0.2s;
+    }
+
+    #case-3 {
+      animation-delay: 0.3s;
+    }
+
+    #case-4 {
+      animation-delay: 0.4s;
+    }
+
+    #case-5 {
+      animation-delay: 0.5s;
+    }
+
+    #case-6 {
+      animation-delay: 0.6s;
+    }
+
+    #case-7 {
+      animation-delay: 0.7s;
+    }
+
+    #case-8 {
+      animation-delay: 0.8s;
+    }
+
+    #case-9 {
+      animation-delay: 0.9s;
+    }
+
+    #case-10 {
+      animation-delay: 1s;
+    }
+  }
+
+  .cart {
+    background-color: rgb(238 238 238);
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 0.75rem;
+
+    &_title {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+    }
+
+    &_titleItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    &_quantity {
+      display: flex;
+      flex-direction: row;
+      border-radius: 50%;
+      border: none;
+
+      &_number {
+        margin: 3px;
+      }
+    }
+
+    &_button {
+      padding: 0.7rem;
+      border-radius: 20px;
+      background: white;
+    }
+
+    &_noAuthText {
+      text-align: center;
+      margin: 3rem;
+    }
+
+    .quantity_button {
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    .quantity_button:hover {
+      cursor: pointer;
+      background-color: #b5b5b5;
+    }
+
+    &_total {
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: right;
+      margin-top: 1rem;
+    }
+  }
+}
